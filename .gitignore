@@ -6,5 +6,5 @@ __pycache__/
 .ipynb_checkpoints/
 
 pca_train.csv
-clustered_train.csv
+cluster_train.csv
 clustered_recommend.csv
