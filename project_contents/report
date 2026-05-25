@@ -1,0 +1,29 @@
+End of Phase 2 Project - Owen Granberg:
+
+This project used unsupervised machine learning techniques to cluster songs from 1950–2019 based on lyrical semantic features and identify interpretable thematic groupings. 
+
+![Semantic Correlation Heatmap](/visuals/semantic-corr-heatmap.png)
+
+Initial exploratory analysis was conducted on a dataset of approximately 28,000 songs containing semantic lyrical scores, metadata, and pre-tokenized lyrics. Univariate, bivariate, and multivariate analysis revealed strong right-skewed semantic distributions and thematic overlap between numerous lyrical dimensions. 
+
+![PCA Explained Variance Plot](/visuals/explained-variance-pca.png)
+
+Non-informative identifier columns and high-dimensional lyrical text columns were removed prior to modeling. Numerical semantic features were standardized using StandardScaler, and PCA dimensionality reduction was applied to preserve approximately 90% of total variance while reducing feature redundancy. 
+
+![PCA 2D Projection Plot](/visuals/2D-PCA-Projection.png)
+
+KMeans clustering was applied to the PCA-transformed feature space. The elbow method and silhouette analysis were used to evaluate cluster counts and select an interpretable clustering solution. The trained preprocessing pipeline and clustering model were then applied to a separate recommendation dataset in order to assign cluster labels to previously unseen songs.
+
+![Elbow Method Plot](/visuals/elbow-method.png)
+
+PCA dimensionality reduction preserved approximately 90% of dataset variance while reducing the semantic feature space to 14 principal components. 
+
+![Silhouette Score Plot](/visuals/silhouette-scores.png)
+
+KMeans clustering with 8 clusters produced semantically interpretable song groupings, with silhouette scores gradually improving as cluster count increased. 
+
+![Cluster Summary Table](/visuals/cluster-summary.png)
+
+The resulting clusters represented themes such as romantic songs, emotionally expressive songs, nightlife party songs, provocative lyrical content, and reflective world-centered songs.
+
+Many lyrical themes overlapped substantially, making cluster boundaries appear gradual rather than sharply separated.The elbow and silhouette analyses did not reveal a perfectly dominant cluster count, suggesting that music semantics exist along continuous thematic dimensions. PCA dimensionality reduction improved clustering stability but reduced direct interpretability of transformed features. Future work could incorporate NLP-based lyrical embeddings such as Word2Vec to capture richer semantic relationships within lyrical text.

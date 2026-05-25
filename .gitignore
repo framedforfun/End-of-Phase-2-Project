@@ -1,0 +1,10 @@
+train.csv
+cleaned_train.csv
+recommend - recommend.csv
+
+__pycache__/
+.ipynb_checkpoints/
+
+pca_train.csv
+clustered_train.csv
+clustered_recommend.csv
