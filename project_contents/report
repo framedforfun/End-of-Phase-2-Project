@@ -22,7 +22,7 @@ PCA dimensionality reduction preserved approximately 90% of dataset variance whi
 
 KMeans clustering with 8 clusters produced semantically interpretable song groupings, with silhouette scores gradually improving as cluster count increased. 
 
-![Cluster Summary Table](/visuals/cluster-summary.png)
+![Cluster Summary Table](/visuals/cluster_summary.png)
 
 The resulting clusters represented themes such as romantic songs, emotionally expressive songs, nightlife party songs, provocative lyrical content, and reflective world-centered songs.
 
